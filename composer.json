@@ -1,0 +1,19 @@
+{
+  "name": "Darkflameninja/Nuonce",
+  "description": "Something to do Something with Nuonce in PHP",
+"license": "MIT",
+  "minimum-stability": "dev",
+  "authors": [{
+      "name": "Felix Wolnik",
+      "email": "intgetrandomnumber@t-online.de"
+  }],
+"autoload": {
+    "classmap": [
+        "src/"
+    ]
+},
+  "require-dev": {
+      "10up/wp_mock": "dev-master",
+      "phpunit/phpunit":"^7"
+  }
+}
