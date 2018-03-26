@@ -2,33 +2,27 @@
 namespace NotAnNSASpy\Nuonce;
 class Nuonce
 {
-    private $action;
-    public function getAction(){
-        return $this->action;
-    }
-    protected function __construct ($action){
-        $this->action = ( $action == NULL ) ? ' nonce_action' : $action;
-    }
-}
-class Something extends Nuonce
-{
     private $nonce;
-    private static function getnonce(){
+    private $action;
+    protected function __construct ($action, $nonce){
+        $this->action = ( $action == NULL ) ? ' nonce_action' : $action;
+        $this->nonce = ( $nonce == NULL ) ? '_wpnonce' : $nonce;
+    }
+    private function getnonce(){
     return $this->nonce;
     }
-    protected function __construct($nonce) {
-        parent::__construct($action);
-        $this->nonce = ( $nonce == NULL ) ? '_wpnonce' : $nonce;
+    public function getAction(){
+        return $this->action;
     }
     public static function url( $url ){
         if (!function_exists('wp_nonce_url') || empty ( $url ) || !is_string ($url))
             return false;
-    return wp_nonce_url( $url, $this->action, $this->nonce );
+    return wp_nonce_url( $url, $this->action, $this->nonce, );
     }
     public static function field( $referer = true ){
         if (!function_exists('wp_nonce_field'))
             return false;
-        return wp_nonce_field( $this->action, $this->action, $referer, false);
+        return wp_nonce_field( $this->action, $this->nonce, $referer, false);
     }
     public static function create(){
         if (!function_exists('wp_create_nonce'))
@@ -45,9 +39,9 @@ class Something extends Nuonce
             return false;
         return check_admin_referer( $this-> action, $this->nonce);
     }
-    public static function AjaxReferer($die = true){
+    public static function AjaxReferer($queryArg, $die = true){
         if (!function_exists('check_ajax_referer'))
             return false;
-        return check_ajax_referer( $this->action, $this->nonce, $die);
+        return check_ajax_referer( $this->action, $queryArg, $die);
     }
 }
