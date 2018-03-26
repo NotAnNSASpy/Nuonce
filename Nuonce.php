@@ -17,7 +17,7 @@ class Nuonce
     public static function url( $url ){
         if (!function_exists('wp_nonce_url') || empty ( $url ) || !is_string ($url))
             return false;
-    return wp_nonce_url( $url, $this->action, $this->nonce, );
+    return wp_nonce_url( $url, $this->action, $this->nonce );
     }
     public static function field( $referer = true ){
         if (!function_exists('wp_nonce_field'))
