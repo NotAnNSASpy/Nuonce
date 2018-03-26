@@ -45,3 +45,4 @@ class Nuonce
         return check_ajax_referer( $this->action, $queryArg, $die);
     }
 }
+ 
