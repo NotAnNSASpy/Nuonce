@@ -1,6 +1,7 @@
 {
   "name": "darkflameninja/nuonce",
   "description": "Something to do Something with Nonce in PHP OOP",
+  "type": "composer-wordpress-package",
   "require-dev": {
     "10up/wp_mock": "^0.1.1"
   },
