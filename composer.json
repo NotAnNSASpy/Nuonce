@@ -1,18 +1,23 @@
 {
   "name": "darkflameninja/nuonce",
-  "description": "Something to do Something with Nuonce in PHP",
-"license": "MIT",
-  "minimum-stability": "dev",
-  "authors": [{
+  "description": "Something to do Something with Nonce in PHP OOP"
+  "require-dev": {
+    "10up/wp_mock": "^0.1.1"
+  }
+  "authors": [
+    {
       "name": "Felix Wolnik",
       "email": "intgetrandomnumber@t-online.de"
-  }],
-"autoload": {
-    "classmap": [
-        "src/"
-    ]
-},
-  "require-dev": {
-      "10up/wp_mock": "dev-master"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=5.6.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "Nuonce": "Nuonce.php"
+    }
   }
 }
