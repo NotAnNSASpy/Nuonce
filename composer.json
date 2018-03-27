@@ -1,10 +1,11 @@
 {
   "name": "darkflameninja/nuonce",
-  "description": "Something to do Something with Nonce in PHP OOP",
+  "description": "Lorem Ipsum",
   "type": "composer-wordpress-package",
   "require-dev": {
     "10up/wp_mock": "^0.1.1"
   },
+  "license": "MIT",
   "authors": [
     {
       "name": "Felix Wolnik",
@@ -18,7 +19,7 @@
   },
   "autoload": {
     "psr-0": {
-      "Nuonce": "Nuonce.php"
+      "nuonce": "Nuonce.php"
     }
   }
 }
