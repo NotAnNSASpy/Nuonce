@@ -1,6 +1,6 @@
 {
   "name": "darkflameninja/nuonce",
-  "description": "Lorem Ipsum",
+  "description": "Something to simplify the handling with Nonces in WP in PHP OOP",
   "type": "composer-wordpress-package",
   "require-dev": {
     "10up/wp_mock": "^0.1.1"
