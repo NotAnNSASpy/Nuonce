@@ -1,5 +1,12 @@
 <?php
 namespace NotAnNSASpy\Nuonce;
+/**
+ * Something
+ *
+ * Class Nuonce
+ * @package darkflameninja\nuonce
+ * @version 0.0.1
+ */
 class Nuonce
 {
     private $nonce;
