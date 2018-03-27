@@ -4,7 +4,7 @@ class Nuonce
 {
     private $nonce;
     private $action;
-    protected function __construct ($action, $nonce){
+    function __construct ($action, $nonce){
         $this->action = ( $action == NULL ) ? ' nonce_action' : $action;
         $this->nonce = ( $nonce == NULL ) ? '_wpnonce' : $nonce;
     }
@@ -45,4 +45,3 @@ class Nuonce
         return check_ajax_referer( $this->action, $queryArg, $die);
     }
 }
- 
