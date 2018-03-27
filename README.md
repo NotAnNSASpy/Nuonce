@@ -16,55 +16,55 @@ to your `composer.json` file and run a composer update.
 ## Usage:
 ### Define your action & nonce
 ```php
-$obj = new Nuonce($action $nonce)
+$yourobj = new Nuonce($action, $nonce); // if your input == ''(in both cases),it's predefined as action = nonce_action & nonce = _wpnonce
 ```
 ### Create an URL
 ```php
-$url = Nuonce::url($url);
+$url = $yourobj->url($url);
 ```
 
 ### Create a nonce field
 ```php
-Nuonce::field();
+$yourobj->field();
 ```
 
 You also can set the referer as first parameter
 
 ```php
 $referer = 'http://mysite.com/something';
-Nuonce::field($referer);
+$yourobj->field($referer);
 ```
 
 Skip the referer by setting it false. 
 ```php
-Nuonce::field($referer, false);
+$yourobj->field($referer, false);
 ```
 
 
 ### Create a nonce
 
 ```php
-$nonce = Nuonce::create();
+$nonce = $yourobj->create();
 ```
 
 ### Check an URL for a valid nonce
 ```php
-$retval = Nuonce::checkAdminReferer();
+$retval = $yourobj->AdminReferer();
 ```
 
 ### Check an AJAX URL for a valid nonce
 ```php
 $queryArg = '_myNonce';
-$retval = Nuonce::check_ajax_referer($queryArg);
+$retval = $yourobj->AjaxReferer($queryArg);
 ```
 
 If the third parameter is set to false, the script won't die, if the nonce is invalid
 
 ```php
-$retval = Nuonce::check_ajax_referer($action, $queryArg, false);
+$retval = $yourobj->AjaxReferer($queryArg, false);
 ```
 
 ### Verify a nonce
 ```php
-$retval = Nuonce::verify();
+$retval = $yourobj->verify();
 ```
