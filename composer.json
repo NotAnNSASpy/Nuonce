@@ -1,9 +1,9 @@
 {
   "name": "darkflameninja/nuonce",
-  "description": "Something to do Something with Nonce in PHP OOP"
+  "description": "Something to do Something with Nonce in PHP OOP",
   "require-dev": {
     "10up/wp_mock": "^0.1.1"
-  }
+  },
   "authors": [
     {
       "name": "Felix Wolnik",
