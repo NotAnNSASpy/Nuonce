@@ -1,6 +1,6 @@
 {
   "name": "darkflameninja/nuonce",
-  "description": "Something to do Something with Nuonce in PHP, Still in Alpha",
+  "description": "Something to do Something with Nuonce in PHP",
 "license": "MIT",
   "minimum-stability": "dev",
   "authors": [{
@@ -13,7 +13,6 @@
     ]
 },
   "require-dev": {
-      "10up/wp_mock": "dev-master",
-      "phpunit/phpunit":"^7"
+      "10up/wp_mock": "dev-master"
   }
 }
