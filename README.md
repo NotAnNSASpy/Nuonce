@@ -9,7 +9,7 @@ composer require Darkflameninja/Nuonce
 Or just add
 
 ```
-"require Darkflameninja/Nuonce": "0.0.1"
+"require Darkflameninja/Nuonce": "1.0.0"
 ```
 to your `composer.json` file and run a composer update.
 
