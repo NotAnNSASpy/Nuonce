@@ -20,12 +20,12 @@ $yourobj = new Nuonce($action, $nonce); // if your input == ''(in both cases),it
 ```
 ### Create an URL
 ```php
-$url = $yourobj->url($url);
+$url = $yourobj->url($url, $name);
 ```
 
 ### Create a nonce field
 ```php
-$yourobj->field();
+$yourobj->field($name);
 ```
 
 You also can set the referer as first parameter
@@ -49,7 +49,7 @@ $nonce = $yourobj->create();
 
 ### Check an URL for a valid nonce
 ```php
-$retval = $yourobj->AdminReferer();
+$retval = $yourobj->AdminReferer($queryArg);
 ```
 
 ### Check an AJAX URL for a valid nonce
